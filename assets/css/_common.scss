@@ -1,0 +1,265 @@
+/* ===========
+  1) GLOBAL STYLES
+  =========== */
+// font-weight
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-900 {
+  font-weight: 900;
+}
+// section-spacing
+.s-py {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media (max-width: 992px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.s-py-20 {
+  @media (max-width: 992px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+// headings
+
+.title {
+  font: normal normal bold 90px/90px Poppins;
+  letter-spacing: 0px;
+  @media (max-width: 992px) {
+    font: normal normal bold 48px/40px Poppins;
+  }
+}
+.sub-title {
+  font: normal normal bold 48px/90px Poppins;
+  letter-spacing: 0px;
+  @media (max-width: 992px) {
+    font: normal normal bold 30px/40px Poppins;
+  }
+}
+
+.title1 {
+  font: normal normal bold 48px/60px Poppins;
+  letter-spacing: 0px;
+  color: #e1001e;
+  opacity: 1;
+  @media (max-width: 767px) {
+    font: normal normal bold 30px/36px Poppins;
+  }
+}
+.title2 {
+  font: normal normal bold 30px/50px Poppins;
+  letter-spacing: 0px;
+  color: #050101;
+  opacity: 1;
+}
+.para1 {
+  font: normal normal normal 24px/36px Poppins;
+  letter-spacing: 0px;
+  color: #050101;
+  opacity: 1;
+  @media (max-width: 767px) {
+    font: normal normal normal 16px/20px Poppins;
+  }
+}
+.para2 {
+  font: normal normal 18px/30px Poppins;
+  letter-spacing: 0px;
+  color: #050101;
+}
+
+/* ===========
+  2) BUTTONS
+  =========== */
+.btn-capsule {
+  border-radius: 50px;
+}
+
+.btn-sm {
+  padding: 5px 24px;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 500;
+}
+.btn-md {
+  padding: 9px 27px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.btn-lg {
+  padding: 30px 50px;
+  font-size: 30px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited {
+  color: $primary;
+  background-color: $white;
+  border-color: $white;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.btn-outline-primary {
+  border-color: $primary;
+  color: $primary;
+  border-width: 2px;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:visited {
+  background-color: $primary;
+  border-color: $primary;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-white {
+  background-color: $white;
+  border-color: $white;
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white:visited {
+  color: $white;
+  background-color: $white;
+  border-color: $white;
+  box-shadow: none !important;
+  outline: none !important;
+  color: $primary;
+}
+.btn-outline-white {
+  border-color: $white;
+  color: $white;
+  border-width: 2px;
+}
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active,
+.btn-outline-white:visited {
+  background-color: $white;
+  border-color: $white;
+  color: $primary;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+// Text-content-card
+.text-content-card {
+  padding-right: 30px;
+  h2 {
+    font: normal normal bold 30px/30px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+    line-height: 34px;
+  }
+  p {
+    font: normal normal normal 18px/30px Poppins;
+    letter-spacing: 0px;
+    color: #ffffff;
+  }
+  @media (max-width: 768px) {
+    text-align: center;
+    h2 {
+      font: normal normal bold 24px/24px Poppins;
+    }
+    p {
+      font: normal normal normal 16px/24px Poppins;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+}
+
+// work-content-card
+.work-content-card {
+  border-radius: 5px;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  .content {
+    margin-left: 32px;
+    margin-bottom: 30px;
+    .card-number {
+      font: normal normal bold 36px/30px Poppins;
+      letter-spacing: 0px;
+      color: #e1001e;
+      opacity: 1;
+    }
+    h3 {
+      font: normal normal bold 24px/30px Poppins;
+      letter-spacing: 0px;
+      color: #ffffff;
+      opacity: 1;
+    }
+  }
+  .custom-image {
+    position: absolute;
+    right: -85px;
+    z-index: 1;
+    top: 70px;
+    @media (max-width: 768px) {
+      transform: rotate(90deg);
+      right: unset;
+      top: unset;
+      left: 28%;
+      margin: 0 auto;
+      bottom: -30px;
+      img {
+        width: 200px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    min-height: 250px;
+  }
+}
+
+// card-with-image
+.card-with-image {
+  position: relative;
+  border-radius: 10px;
+  .overlay {
+    position: relative;
+    .content {
+      position: absolute;
+      bottom: 15px;
+      color: #fff;
+      margin: 0 auto;
+      text-align: center;
+      left: 0;
+      right: 0;
+    }
+  }
+}

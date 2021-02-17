@@ -1,0 +1,31 @@
+@media (max-width: 991px) {
+  .navbar-toggler, .navbar-toggler:focus {
+    border: none !important; }
+
+  #navbarSupportedContent {
+    background: #E1001E;
+    position: absolute;
+    top: 106px;
+    left: 0; }
+
+  #header nav ul {
+    text-align: start !important; }
+
+  #navbarSupportedContent button {
+    background: #ffff;
+    color: #E1001E;
+    margin-bottom: 18px;
+    text-align: start;
+    float: left;
+    margin-left: 11px; }
+
+  #header .fixed #navbarSupportedContent {
+    top: 77px;
+    z-index: 999; }
+
+  .navbar-dark .navbar-toggler {
+    color: #fff !important;
+    border-color: #fff !important;
+    font-size: 37px; } }
+
+/*# sourceMappingURL=newupdate.css.map */
