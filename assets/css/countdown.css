@@ -1,0 +1,17 @@
+#countdown {
+  display: flex;
+}
+#countdown .time {
+  font-weight: 700;
+  font-size: 22px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0 16px;
+}
+#countdown .time:first-child {
+  border-left: none;
+}
+#countdown .time span {
+  font-weight: 400;
+  font-size: 16px;
+  display: block;
+}

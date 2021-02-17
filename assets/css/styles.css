@@ -63,7 +63,10 @@ p {
   color: #050101 !important;
 }
 
-.klaviyo-form form [data-testid="form-row"] input:focus::-webkit-input-placeholder {
+.klaviyo-form
+  form
+  [data-testid="form-row"]
+  input:focus::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: transparent !important;
 }
@@ -139,7 +142,10 @@ p {
     color: #050101 !important;
   }
 
-  .klaviyo-form form [data-testid="form-row"] input:focus::-webkit-input-placeholder {
+  .klaviyo-form
+    form
+    [data-testid="form-row"]
+    input:focus::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: transparent !important;
   }
@@ -147,7 +153,10 @@ p {
     /* Firefox 19+ */
     color: transparent !important;
   }
-  .klaviyo-form form [data-testid="form-row"] input:focus:-ms-input-placeholder {
+  .klaviyo-form
+    form
+    [data-testid="form-row"]
+    input:focus:-ms-input-placeholder {
     /* IE 10+ */
     color: transparent !important;
   }
@@ -313,6 +322,26 @@ p {
 .btn-primary {
   background-color: #e1001e;
   border-color: #e1001e;
+  cursor: pointer;
+}
+
+.btn-sec {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: #eee;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  padding-left: 80px;
+}
+
+.btn-sec:hover,
+.btn-sec:focus {
+  color: #e1001e;
+  background-color: #fff;
+  border-color: #fff;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .btn-primary:hover,
@@ -616,9 +645,9 @@ section#section-3 .text-content-card h2 {
   padding-bottom: 10px;
 }
 
-#section-10 {
+/* #section-10 {
   display: none;
-}
+} */
 
 .navbar-close-icon {
   width: 30px;
@@ -711,7 +740,7 @@ section#section-3 .text-content-card h2 {
 }
 
 section#top-message {
-  background-color: #e1001e;
+  background-color: #2e95ba;
   color: white;
   padding: 10px;
   text-align: center;
@@ -745,20 +774,61 @@ section#top-message ul li p {
 }
 
 section#section4 {
-  background: transparent url("./../img/eliminate back.jpg") 0% 0% no-repeat padding-box;
+  background: transparent url("./../img/eliminate back.jpg") 0% 0% no-repeat
+    padding-box;
   background-size: cover;
 }
+
+section#section4 .performing-card {
+  position: relative;
+}
+
+section#section4 .performing-card h2 {
+  color: red;
+  border-bottom: 3px solid;
+  width: 60px;
+  font-size: 44px;
+}
+
+section#section4 .performing-card img {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+section#section4 .performing-card h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+section#section4 .performing-card p.main-para {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+}
+
 section#section4 .top-content h3 {
-  text-align: center;
-  font: normal normal bold 24px/36px Poppins;
+  font: normal normal bold 40px/40px Poppins;
   letter-spacing: 0px;
   color: #ffffff;
-  opacity: 1;
-  margin-bottom: 20px;
+  line-height: 44px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   section#section4 .top-content h3 {
     font: normal normal bold 24px/36px Poppins;
+  }
+  section#section4 {
+    text-align: center;
+  }
+  section#section4 .performing-card h2 {
+    color: red;
+    border-bottom: 3px solid;
+    font-size: 44px;
+    width: 60px;
+    display: inline-block;
   }
 }
 section#section4 .top-content h2 {
@@ -772,6 +842,13 @@ section#section4 .top-content h2 {
 @media (max-width: 767px) {
   section#section4 .top-content h2 {
     font: normal normal bold 30px/36px Poppins;
+  }
+  section#section4 .performing-card img {
+    width: 130px;
+    position: relative;
+    right: 0;
+    top: -29px;
+    transform: rotate(90deg);
   }
 }
 
@@ -1027,7 +1104,7 @@ section#section8 .bdr-round {
 }
 
 #header {
-  background-image: url("../img/header/heroimage.jpg");
+  background-image: url("../img/hero.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1128,6 +1205,24 @@ section#section8 .bdr-round {
     margin-bottom: 32px;
   }
 }
+#header .btn-outer {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 100%;
+  padding: 10px;
+  background-color: #333331;
+  left: 9px;
+  top: 13px;
+  border: 1px solid;
+}
+#header .btn-outer svg {
+  position: absolute;
+  left: 17px;
+}
 
 #section-1 {
   padding-top: 40px;
@@ -1135,7 +1230,7 @@ section#section8 .bdr-round {
 #section-1 .item {
   max-width: 180px;
   margin: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 #section-1 .item img {
   margin-bottom: 10px;
@@ -1145,12 +1240,13 @@ section#section8 .bdr-round {
 }
 
 #section-2 {
-  padding-top: 20px;
-  background: transparent url("../img/flowbig.png?version=1.1") 0% 0% no-repeat padding-box;
+  padding-top: 60px;
+  /* background: transparent url("../img/flowbig.png?version=1.1") 0% 0% no-repeat
+    padding-box;
   background-position: bottom;
-  padding-bottom: 120px;
+  padding-bottom: 120px; */
   margin-bottom: -40px;
-  height: 1050px;
+  height: 850px;
   overflow: hidden;
 }
 #section-2 .col-6 {
@@ -1198,24 +1294,47 @@ section#section8 .bdr-round {
   margin: 0;
   list-style-type: none;
 }
+/* changes */
 #section-2 .root-ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: -10px 0px;
   border-radius: 50%;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
+  max-width: 230px;
+  min-width: 230px;
+  min-height: 230px;
+  max-height: 230px;
+  margin: auto;
+  margin-bottom: 60px;
+  border: 2px solid #cecece;
+}
+#section-2 .root-ul li .outer-comp {
+  padding: -10px 0px;
+  border-radius: 50%;
+  background-color: #fff;
   max-width: 220px;
   min-width: 220px;
   min-height: 220px;
-  margin: auto;
-  margin-bottom: 60px;
   max-height: 220px;
+  border: 2px solid #e0e0e0;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   #section-2 .root-ul li {
-    max-width: 173px;
-    min-width: 173px;
-    min-height: 173px;
-    max-height: 173px;
+    max-width: 170px;
+    min-width: 170px;
+    min-height: 170px;
+    max-height: 170px;
   }
+  #section-2 .root-ul li .outer-comp {
+    max-width: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    max-height: 160px;
+  }
+  /* changes end */
   #section-2 .root-ul li .circle-comp {
     padding: 0px 35px;
     padding-top: 38px;
@@ -1317,6 +1436,7 @@ section#section-3 .section-head-part p {
 }
 section#section-3 .text-content-card h2 {
   text-decoration: line-through;
+  color: #e1001e !important;
 }
 section#section-3 .text-content-card h2,
 section#section-3 .text-content-card p {
@@ -1643,7 +1763,7 @@ section#overflow-client .card-body button {
   }
 }
 #section-10 .add-card-wrapper {
-  width: 534px;
+  width: 383px;
 }
 @media (max-width: 992px) {
   #section-10 .add-card-wrapper {
@@ -1789,7 +1909,6 @@ section#overflow-client .card-body button {
 #section-12 {
   background: url("../img/section9/bg.jpg");
   background-position: center;
-  overflow: hidden;
   background-size: cover;
 }
 #section-12 h3 {
@@ -2317,7 +2436,7 @@ section#overflow-client .card-body button {
   .modelOnSubmit .content1 .modalImg img {
     position: relative;
   }
-  .modelOnSubmit .content1{
+  .modelOnSubmit .content1 {
     text-align: center;
   }
   .modelOnSubmit .content1 .modal-body {
@@ -2339,7 +2458,7 @@ section#overflow-client .card-body button {
 }
 
 @media (max-width: 768px) {
-  .modelOnSubmit .content1{
+  .modelOnSubmit .content1 {
     text-align: left;
   }
 
@@ -2379,4 +2498,132 @@ section#overflow-client .card-body button {
 .modelOnSubmit .content1 .para1 b {
   font-size: 20px;
   line-height: 30px;
+}
+#subscription {
+  padding: 40px;
+  background-color: rgb(31, 30, 30);
+}
+#subscription .subscription-card {
+  width: 100%;
+}
+#subscription .media-card {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #subscription .subscription-card {
+    width: 80%;
+  }
+  #subscription .media-card {
+    width: 85%;
+  }
+}
+#subscription .subscription-card label {
+  font-weight: 600;
+  font-size: 26px;
+  color: #fff;
+  line-height: 32px;
+}
+#subscription .subscription-card .form-group {
+  background: #fff;
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+@media (max-width: 992px) {
+  #subscription .subscription-card .form-group {
+    flex-direction: column;
+  }
+}
+#subscription .subscription-card .form-group button {
+  background: red;
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 16px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  min-width: max-content;
+}
+
+#subscription .subscription-card .form-group input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding-left: 40px;
+  padding-right: 20px;
+  min-width: 100px;
+}
+@media (max-width: 992px) {
+  #subscription .subscription-card .form-group button {
+    margin-top: 10px;
+  }
+  #subscription .subscription-card .form-group input {
+    padding: 6px 12px;
+  }
+}
+#subscription .subscription-card .form-group input::-webkit-input-placeholder {
+  color: gray;
+}
+#subscription .custom-styl {
+  border-left: 1px solid #888;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+@media (max-width: 992px) {
+  #subscription .custom-styl {
+    border-left: none;
+  }
+}
+#subscription .media-card {
+  display: flex;
+  padding-left: 30px;
+}
+@media (max-width: 992px) {
+  #subscription .media-card {
+    padding-left: 0px;
+  }
+}
+#subscription .media-card .media {
+  height: 100px;
+  width: 100px;
+  min-height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  margin-right: 30px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#subscription .media-card .media img {
+  max-width: 100%;
+  width: 100%;
+}
+#subscription .media-card .body {
+  display: flex;
+  flex-direction: column;
+}
+#subscription .media-card .body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 14px 0 7px 0;
+}
+#subscription .media-card .body p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+}
+#subscription .media-card .body .icons {
+  display: flex;
+}
+#subscription .media-card .body .icons span {
+  margin-right: 6px;
+}
+
+.bg-blue {
+  background-color: #185d77 !important;
 }

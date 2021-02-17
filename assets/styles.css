@@ -615,7 +615,7 @@ section#section-3 .text-content-card h2 {
 }
 
 section#top-message {
-  background-color: #e1001e;
+  background-color: #2e95ba !important;
   color: white;
   padding: 10px;
   text-align: center;
@@ -649,7 +649,8 @@ section#top-message ul li p {
 }
 
 section#section4 {
-  background: transparent url("./../img/eliminate back.jpg") 0% 0% no-repeat padding-box;
+  background: transparent url("./../img/eliminate back.jpg") 0% 0% no-repeat
+    padding-box;
   background-size: cover;
 }
 section#section4 .top-content h3 {
@@ -1050,7 +1051,8 @@ section#section8 .bdr-round {
 
 #section-2 {
   padding-top: 20px;
-  background: transparent url("../img/flowbig.png?version=1.1") 0% 0% no-repeat padding-box;
+  background: transparent url("../img/flowbig.png?version=1.1") 0% 0% no-repeat
+    padding-box;
   background-position: bottom;
   padding-bottom: 120px;
   margin-bottom: -40px;
