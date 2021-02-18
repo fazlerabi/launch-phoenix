@@ -1109,6 +1109,7 @@ section#section8 .bdr-round {
   background-image: url("../img/hero.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-x: right;
 }
 #header .underlne {
   border-bottom: 3px solid #e1001e;
@@ -2643,4 +2644,7 @@ section#overflow-client .card-body button {
 
 .bg-blue {
   background-color: #185d77 !important;
+}
+.typewrite {
+  color: #e1001e;
 }
