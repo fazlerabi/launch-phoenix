@@ -31,12 +31,12 @@ p {
 
 .klaviyo-form form [data-testid="form-row"] input {
   width: 100% !important;
-  border-radius: 50px !important;
+  border-radius: 8px !important;
   font-size: 30px !important;
   line-height: 46px !important;
   color: #050101 !important;
   border: none !important;
-  padding: 22px 0 !important;
+  padding: 12px 0 !important;
   text-align: center !important;
   height: auto !important;
   outline: none !important;
@@ -82,13 +82,13 @@ p {
 
 .klaviyo-form form [data-testid="form-row"] button {
   width: 100% !important;
-  border-radius: 50px !important;
+  border-radius: 8px !important;
   border: none !important;
   font-size: 30px !important;
   line-height: 46px !important;
   background: red !important;
   text-align: center !important;
-  padding: 22px 0 !important;
+  padding: 12px 0 !important;
   color: #fff !important;
 }
 
@@ -1428,6 +1428,8 @@ section#section8 .bdr-round {
 section#section-3 {
   padding: 60px 0px;
   padding-bottom: 70px;
+  background-image: url(../img/circlebg.png);
+  background-position: top;
 }
 section#section-3 .section-head-part {
   text-align: center;
@@ -2112,7 +2114,7 @@ section#overflow-client .card-body button {
 }
 
 .top-popup-box {
-  background-image: url(./../img/modal1.png);
+  background-image: url(./../img/popupbg.png);
   background-size: cover;
   border: none;
   border-radius: 15px;
@@ -2638,4 +2640,20 @@ section#overflow-client .card-body button {
 }
 .typewrite {
   color: #e1001e;
+}
+
+@media (min-width: 500px) {
+  .content2 .txt3 {
+    font-size: 40px;
+  }
+  .content2 .txt1 {
+    font-size: 40px;
+    margin: 0;
+    line-height: 100px;
+    margin-bottom: -28px;
+  }
+  .content2 p.main-para {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
