@@ -2267,7 +2267,7 @@ section#overflow-client .card-body button {
 }
 
 #cct-discount-btn {
-  padding: 13px 15px;
+  padding: 13px 0 13px 15px;
   overflow: hidden;
   border-top-left-radius: 22px;
   margin-left: -10px;
