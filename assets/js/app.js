@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: true,
+    arrows: false,
+    navigation: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -31,6 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
       // instead of a settings object
     ],
   });
+});
+
+$('.owl-carousel').owlCarousel({
+  items:1,
+  loop:false,
+  center:true,
+  margin:10,
+  dots: true,
+  URLhashListener:true,
+  autoplayHoverPause:true,
+  startPosition: 'URLHash'
 });
 
 $(".navbar-toggler").on("click", function() {

@@ -17,24 +17,24 @@ $(function () {
 });
 
 $(function () {
-  var $section = $("#home");
-  var $queue = $({});
+  let $section = $("#home");
+  let $queue = $({});
 
   function loadDaBars() {
     $(".progress > div").each(function () {
       $(this).css({ width: 0 });
     });
-    var $meters = $(".active.tab-pane .progress > div");
+    let $meters = $(".active.tab-pane .progress > div");
     $meters.each(function () {
-      var $el = $(this);
-      var origWidth = $el.parents().attr("bar-width");
+      let $el = $(this);
+      let origWidth = $el.parents().attr("bar-width");
       $el.animate({ width: origWidth }, 500);
     });
   }
 
   $(document).bind("scroll", function (ev) {
-    var scrollOffset = $(document).scrollTop();
-    var containerOffset = $section.offset().top - window.innerHeight;
+    let scrollOffset = $(document).scrollTop();
+    let containerOffset = $section.offset().top - window.innerHeight;
     if (scrollOffset > containerOffset) {
       loadDaBars();
       // unbind event not to load scrolsl again
@@ -49,7 +49,7 @@ $(function () {
   });
 });
 
-var triggered = false;
+let triggered = false;
 
 $(document).ready(function () {
   $(".content1").hide();
@@ -60,12 +60,8 @@ $(document).ready(function () {
     }
   }, 15000);
 
-  var interval = setInterval(function () {
-    if (
-      $(".klaviyo-form")
-        .text()
-        .includes("Your entry has been received!")
-    ) {
+  let interval = setInterval(function () {
+    if ($(".klaviyo-form").text().includes("Your entry has been received!")) {
       clearInterval(interval);
       $(".klaviyo-form").parent().parent().parent().addClass("modelOnSubmit");
       $(".content2").hide();
@@ -90,3 +86,62 @@ $(".custom-close-btn").on("click", function () {
 $(".cct-discount-close").on("click", function () {
   $(".cct-discount-btn").css({ display: "none" });
 });
+
+let TxtType = function (el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = "";
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function () {
+  let i = this.loopNum % this.toRotate.length;
+  let fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+  let that = this;
+  let delta = 200 - Math.random() * 100;
+
+  if (this.isDeleting) {
+    delta /= 2;
+  }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === "") {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function () {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function () {
+  let elements = document.getElementsByClassName("typewrite");
+  for (let i = 0; i < elements.length; i++) {
+    let toRotate = elements[i].getAttribute("data-type");
+    let period = elements[i].getAttribute("data-period");
+    if (toRotate) {
+      new TxtType(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  let css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+  document.body.appendChild(css);
+};

@@ -1,5 +1,5 @@
 let div = document.getElementById("countdown");
-let countDownDate = new Date("Feb 21, 2021 15:37:25").getTime();
+let countDownDate = new Date("Feb 19, 2021 18:37:25").getTime();
 
 let x = setInterval(function () {
   // Get today's date and time

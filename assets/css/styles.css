@@ -332,7 +332,7 @@ p {
   color: #fff;
   font-size: 18px;
   position: relative;
-  padding-left: 80px;
+  /* padding-left: 80px; */
 }
 
 .btn-sec:hover,
@@ -648,7 +648,9 @@ section#section-3 .text-content-card h2 {
 /* #section-10 {
   display: none;
 } */
-
+.navbar {
+  z-index: 2 !important;
+}
 .navbar-close-icon {
   width: 30px;
   height: 30px;
@@ -1243,11 +1245,17 @@ section#section8 .bdr-round {
   padding-top: 60px;
   /* background: transparent url("../img/flowbig.png?version=1.1") 0% 0% no-repeat
     padding-box;
-  background-position: bottom;
-  padding-bottom: 120px; */
+  background-position: bottom; */
+  padding-bottom: 120px;
   margin-bottom: -40px;
-  height: 850px;
+  height: 900px;
   overflow: hidden;
+}
+#section-2 .machine-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 #section-2 .col-6 {
   position: relative;
@@ -1263,6 +1271,9 @@ section#section8 .bdr-round {
   padding: 30px;
   padding-top: 10px;
   padding-bottom: 60px;
+}
+#section-2 .root-ul {
+  z-index: 1;
 }
 #section-2 .root-ul.right {
   position: absolute;
@@ -1703,6 +1714,7 @@ section#overflow-client .card-body button {
 }
 #section-10 .slider .slider-img {
   overflow: hidden;
+  z-index: 0;
 }
 #section-10 .slider .slider-img img {
   max-width: 100%;
@@ -2537,35 +2549,40 @@ section#overflow-client .card-body button {
   }
 }
 #subscription .subscription-card .form-group button {
-  background: red;
-  color: #fff;
-  font-weight: 700;
-  padding: 6px 16px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  min-width: max-content;
+  color: #fff ;
+  font-weight: 700 ;
+  padding: 6px 16px ;
+  outline: none ;
+  border: none ;
+  border-radius: 4px ;
+  font-size: 18px ;
+  min-width: max-content ;
+  line-height: 24px ;
+  border: 1px solid transparent;
+}
+#subscription .subscription-card .form-group button:hover {
+  color: #e1001e ;
+  border-color: #e1001e;
 }
 
 #subscription .subscription-card .form-group input {
-  border: none;
-  outline: none;
-  font-size: 20px;
-  padding-left: 40px;
-  padding-right: 20px;
-  min-width: 100px;
+  border: none ;
+  outline: none ;
+  font-size: 20px ;
+  padding-left: 20px ;
+  padding-right: 20px ;
+  min-width: 100px ;
 }
 @media (max-width: 992px) {
   #subscription .subscription-card .form-group button {
-    margin-top: 10px;
+    margin-top: 10px ;
   }
   #subscription .subscription-card .form-group input {
-    padding: 6px 12px;
+    padding: 6px 12px ;
   }
 }
 #subscription .subscription-card .form-group input::-webkit-input-placeholder {
-  color: gray;
+  color: gray !important;
 }
 #subscription .custom-styl {
   border-left: 1px solid #888;
