@@ -1099,7 +1099,7 @@ section#section8 .bdr-round {
   background-image: url("../img/hero.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: right;
+  background-position: right bottom;
 }
 #header .underlne {
   border-bottom: 3px solid #e1001e;

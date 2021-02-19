@@ -1,12 +1,11 @@
 let div = document.getElementById("countdown");
-let countDownDate = new Date("Feb 19, 2021 18:37:25").getTime();
+let distance = 24 * 60 * 60 * 1000;
 
 let x = setInterval(function () {
   // Get today's date and time
-  let now = new Date().getTime();
-
   // Find the distance between now and the count down date
-  let distance = countDownDate - now;
+
+  distance -= 1000;
 
   // Time calculations for days, hours, minutes and seconds
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
