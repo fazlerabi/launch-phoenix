@@ -1019,8 +1019,8 @@ section#section8 .bdr-round {
   font-size: 30px;
   line-height: 40px;
   font-weight: 300;
-  margin-top: 28px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 @media (max-width: 767px) {
   #header .header-content h2 {
@@ -1496,12 +1496,16 @@ section#overflow-client .card-body button {
 #section-10 .slider .slider-thumbnails {
   display: flex;
   margin-top: 20px;
+  justify-content: space-between;
 }
 #section-10 .slider .slider-thumbnails .slider-thumbnail {
-  height: 184px;
-  width: 184px;
+  height: 80px;
+  width: 80px;
   position: relative;
   overflow: hidden;
+}
+#section-10 .owl-carousel .owl-stage {
+  display: flex;
 }
 #section-10 .slider .slider-thumbnails .slider-thumbnail img {
   max-height: 100%;
@@ -1515,8 +1519,8 @@ section#overflow-client .card-body button {
   align-items: center;
 }
 #section-10 .slider .slider-thumbnails .slider-thumbnail .play-icon {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
