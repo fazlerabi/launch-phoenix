@@ -50,6 +50,31 @@ $(".navbar-toggler").on("click", function() {
   $(this).parent().parent().toggleClass("toggled");
 });
 
+$(".get-discount").on("click", function() {
+  $.ajax({
+    url: "https://a.klaviyo.com/ajax/subscriptions/subscribe",
+    method: "POST",
+    data: {
+      g: "Y88ag3",
+      $fields: "$source,$email,$consent_method,$consent_form_id,$consent_form_version",
+      $source: "The Phoenix",
+      $email: $(".enter-email-discount").val(),
+      $consent_method: "Klaviyo Form",
+      $consent_form_id: "XsfBr6",
+      $consent_form_version: "2312983"
+    },
+    success: function(result){
+      $(".coupon-success-card").removeClass("d-none");
+      $(".subscription-card").addClass("d-none");
+    }
+  });
+});
+
+$(".coupon-close").on("click", function() {
+  $(".coupon-success-card").addClass("d-none");
+  $(".subscription-card").removeClass("d-none");
+});
+
 $(window).scroll(function () {
   var sticky = $(".navbar"),
     scroll = $(window).scrollTop();
