@@ -2712,3 +2712,7 @@ section#overflow-client .card-body button {
   right: 8px;
   cursor: pointer;
 }
+
+a, button{
+  -webkit-appearance: button-bevel !important;
+}
