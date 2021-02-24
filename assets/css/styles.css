@@ -232,7 +232,7 @@ p {
 }
 @media (max-width: 992px) {
   .title {
-    font: normal normal bold 48px/40px Poppins;
+    font: normal normal bold 40px/32px Poppins;
   }
 }
 
@@ -704,7 +704,7 @@ section#section-3 .text-content-card h2 {
     color: #fff !important;
     border-color: #fff !important;
     font-size: 37px;
-    height: 52px;
+    padding: 0;
   }
   #header nav ul li a {
     border-radius: 50px;
@@ -880,6 +880,12 @@ section#section6 .phoenix-tabs .nav-link {
   opacity: 1;
   padding-bottom: 20px;
   border: 2px transparent;
+}
+@media(max-width: 992px){
+  section#section6 .phoenix-tabs .nav-link {
+    padding: 0 16px !important;
+  }
+
 }
 section#section6 .phoenix-tabs .nav-link:hover {
   background: none;
@@ -1125,6 +1131,22 @@ section#section8 .bdr-round {
   border-radius: 8px;
 }
 
+@media(max-width: 992px){
+  section#section8 .bdr-round {
+    border-radius: 0px;
+  }
+
+}
+section#section7 .tech-video {
+  border-radius: 8px;
+}
+@media(max-width: 992px){
+  section#section7 .tech-video {
+    border-radius: 0;
+  }
+
+}
+
 #header {
   background-image: url("../img/hero.png");
   background-repeat: no-repeat;
@@ -1154,6 +1176,10 @@ section#section8 .bdr-round {
   background: white;
   padding: 5px 40px;
   box-shadow: 0px 0px 10px #0000002e;
+}
+#header .fixed  .navbar-toggler{
+  padding-top: 8px;
+  background: #777;
 }
 @media (max-width: 767px) {
   #header .fixed {
@@ -1203,6 +1229,9 @@ section#section8 .bdr-round {
     text-align: center;
     padding: 80px 0px;
     padding-top: 40px;
+  }
+  #header .header-content a {
+    font-size: 24px;
   }
 }
 #header .header-content h2 {
@@ -1563,6 +1592,7 @@ section#overflow-client .card-body h4 {
   color: #050101;
   margin-top: 15px;
   margin-bottom: 15px;
+ 
 }
 section#overflow-client .card-body p {
   font: normal normal normal 16px/24px Poppins;
@@ -1637,8 +1667,11 @@ section#overflow-client .card-body button {
   overflow: hidden;
 }
 @media (max-width: 992px) {
+  #section-9 .slick-list{
+    padding: 0 20px !important;
+  }
   #section-9 .client-card {
-    margin: 24px;
+    margin: 8px;
   }
 }
 #section-9 .client-card .video {
@@ -1646,6 +1679,11 @@ section#overflow-client .card-body button {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 244px;
+  max-height: 244px;
+  min-height: 244px;
+  overflow: hidden;
+  background:rgb(0,0,0,0.4)
 }
 #section-9 .client-card .video img {
   width: 100%;
@@ -1714,6 +1752,12 @@ section#overflow-client .card-body button {
   color: #050101;
   margin-top: 0;
   margin-bottom: 10px;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  height: 48px;
 }
 #section-9 .client-card .card-body p {
   font: normal normal normal 16px/24px Poppins;
@@ -1721,6 +1765,11 @@ section#overflow-client .card-body button {
   color: #050101;
   margin-bottom: 0;
   margin-top: 7px;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 #section-9 .client-card .card-body button {
   margin-top: 7px;
@@ -1971,15 +2020,15 @@ section#overflow-client .card-body button {
   }
 }
 #section-12 img {
-  bottom: -88px;
-  right: 0;
-  max-height: 100%;
+  bottom: -18px;
+  right: 40px;
+  max-height: 80%;
 }
 @media (max-width: 992px) {
   #section-12 img {
-    right: unset;
-    bottom: -57px;
-    left: calc(100% - 166px);
+    width: 94px;
+    right: 10px;
+    bottom: -10px;
   }
 }
 
@@ -2540,7 +2589,7 @@ section#overflow-client .card-body button {
   line-height: 30px;
 }
 #subscription {
-  padding: 20px 40px;
+  padding: 20px 8px;
   background-color: rgb(31, 30, 30);
 }
 #subscription .subscription-card {
@@ -2550,6 +2599,9 @@ section#overflow-client .card-body button {
   width: 100%;
 }
 @media (min-width: 992px) {
+  #subscription{
+    padding: 20px 40px;
+  }
   #subscription .subscription-card {
     width: 80%;
   }
@@ -2711,4 +2763,8 @@ section#overflow-client .card-body button {
   top: 0;
   right: 8px;
   cursor: pointer;
+}
+
+a, button{
+  -webkit-appearance: button-bevel !important;
 }
