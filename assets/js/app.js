@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-$('.owl-carousel').owlCarousel({
+var owl = $('.owl-carousel').owlCarousel({
   items:1,
   loop:false,
   center:true,
@@ -44,6 +44,11 @@ $('.owl-carousel').owlCarousel({
   URLhashListener:true,
   autoplayHoverPause:true,
   startPosition: 'URLHash'
+});
+owl.on('changed.owl.carousel', function(event) {
+  const selIndex = $('.owl-dots').find('.active').index();
+  $('.slider-thumbnail').removeClass('active');
+  $($('.slider-thumbnails').find('a')[selIndex]).addClass('active');
 });
 
 $(".navbar-toggler").on("click", function() {
@@ -84,6 +89,7 @@ $(window).scroll(function () {
     sticky.addClass("navbar-light");
     sticky.removeClass("navbar-dark");
     $(".navbar-brand img").attr("src", "assets/img/logored.svg");
+    $(".navbar-brand img").addClass("logored");
     sticky.addClass("fixed");
   } else {
     sticky.removeClass("fixed");
