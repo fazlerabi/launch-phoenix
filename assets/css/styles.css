@@ -23,7 +23,7 @@ p {
 
 .klaviyo-form form [data-testid="form-row"] {
   z-index: 10000 !important;
-  max-width: 70% !important;
+  max-width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   margin-top: 5rem !important;
@@ -81,15 +81,28 @@ p {
 }
 
 .klaviyo-form form [data-testid="form-row"] button {
-  width: 100% !important;
-  border-radius: 8px !important;
-  border: none !important;
-  font-size: 30px !important;
-  line-height: 46px !important;
-  background: red !important;
-  text-align: center !important;
-  padding: 12px 0 !important;
-  color: #fff !important;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-size: 30px;
+  line-height: 46px;
+  background: red;
+  text-align: center;
+  padding: 12px 0;
+  color: #fff;
+  margin-top: 1rem;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.klaviyo-form form [data-testid="form-row"] button:hover {
+  background: white;
+  border: 1px solid red;
+  color: red;
+}
+
+.klaviyo-form form [data-testid="form-row"] button:hover i {
+  border-color: red !important;
 }
 
 .klaviyo-form form {
@@ -107,7 +120,6 @@ p {
 
   .klaviyo-form form [data-testid="form-row"] input {
     width: 100% !important;
-    border-radius: 50px !important;
     font-size: 20px !important;
     line-height: 46px !important;
     color: #050101 !important;
@@ -157,15 +169,16 @@ p {
   }
 
   .klaviyo-form form [data-testid="form-row"] button {
-    width: 100% !important;
-    border-radius: 50px !important;
-    border: none !important;
-    font-size: 20px !important;
-    line-height: 46px !important;
-    background: red !important;
-    text-align: center !important;
-    padding: 10px 0 !important;
-    color: #fff !important;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    line-height: 46px;
+    background: red;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid transparent;
   }
 
   .klaviyo-form form {
@@ -2197,7 +2210,7 @@ section#overflow-client .card-body button {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
 }
 
 .clr-p {
@@ -2312,16 +2325,21 @@ section#overflow-client .card-body button {
 @media (max-width: 991px) {
   .top-popup-box {
     /* padding: 10px; */
+    padding-top: 90px;
+    max-width: 400px;
     padding-left: 10px;
-    padding-bottom: 0;
+    padding-bottom: 120px;
     background-position: right;
+    background-position: right -144px bottom 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .top-popup-box h3 {
-    font-size: 20px;
+    font-size: 32px;
     line-height: 30px;
   }
   .top-popup-box h2 {
-    font-size: 40px;
+    font-size: 43px;
     line-height: 50px;
   }
   .top-popup-box p.main-para {
@@ -2433,7 +2451,6 @@ section#overflow-client .card-body button {
 .success-message .success-btn {
   width: 70% !important;
   max-width: 500px !important;
-  border-radius: 50px !important;
   border: none !important;
   font-size: 30px !important;
   line-height: 46px !important;
@@ -2467,7 +2484,6 @@ section#overflow-client .card-body button {
   .success-message .success-btn {
     width: 100% !important;
     max-width: 500px !important;
-    border-radius: 50px !important;
     border: none !important;
     font-size: 20px !important;
     line-height: 46px !important;
@@ -2598,6 +2614,50 @@ section#overflow-client .card-body button {
   box-shadow: 1px 1px 2px #00000047;
 }
 
+.modal-body .content1 a.get-the-phoenix {
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  font-size: 30px;
+  line-height: 46px;
+  background: red;
+  text-align: center;
+  padding: 12px 0;
+  color: #fff;
+  margin-top: 1rem;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.modal-body .content1 .dash-150-off {
+  font-size: 48px;
+  font-weight: bold;
+  border: 4px dashed grey;
+  text-align: center;
+  padding: 16px 0;
+  line-height: 64px;
+  margin: 30px 0 15px 0;
+}
+
+.modal-body .content1 .use-coupon-code {
+  font-size: 32px;
+  font-weight: regular;
+  text-align: left;
+  line-height: 48px;
+}
+
+.modal-body .content1 .sub-title {
+  font-size: 18px;
+  color: grey;
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
 .modelOnSubmit .content1 h3 {
   font-size: 35px;
   line-height: 45px;
@@ -2653,6 +2713,17 @@ section#overflow-client .card-body button {
   margin-top: 24px;
 }
 @media (max-width: 992px) {
+  .modal-body .content1 a.get-the-phoenix {
+    font-size: 20px;
+  }
+  .modal-body .content1 a.get-the-phoenix:hover {
+    background: white;
+    border: 1px solid red;
+    color: red;
+  }
+  .modal-body .content1 a.get-the-phoenix:hover i {
+    border-color: red !important; 
+  }
   #subscription .subscription-card .form-group {
     flex-direction: column;
   }
@@ -2772,6 +2843,7 @@ section#overflow-client .card-body button {
 @media (min-width: 500px) {
   .content2 .txt3 {
     font-size: 40px;
+    line-height: 40px;
   }
   .content2 .txt1 {
     font-size: 40px;
@@ -2821,5 +2893,15 @@ a, button, [type="button"], [type="reset"], [type="submit"] {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.content2 {
+  width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  .content2 {
+    width: 100%;
   }
 }

@@ -56,23 +56,29 @@ $(".navbar-toggler").on("click", function() {
 });
 
 $(".get-discount").on("click", function() {
-  $.ajax({
-    url: "https://a.klaviyo.com/ajax/subscriptions/subscribe",
-    method: "POST",
-    data: {
-      g: "Y88ag3",
-      $fields: "$source,$email,$consent_method,$consent_form_id,$consent_form_version",
-      $source: "The Phoenix",
-      $email: $(".enter-email-discount").val(),
-      $consent_method: "Klaviyo Form",
-      $consent_form_id: "XsfBr6",
-      $consent_form_version: "2312983"
-    },
-    success: function(result){
-      $(".coupon-success-card").removeClass("d-none");
-      $(".subscription-card").addClass("d-none");
-    }
-  });
+  var $this = $(this);
+  var email = $this.parent().parent().parent().find(".enter-email-discount").val();
+  if (email && /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+    $.ajax({
+      url: "https://a.klaviyo.com/ajax/subscriptions/subscribe",
+      method: "POST",
+      data: {
+        g: "Y88ag3",
+        $fields: "$source,$email,$consent_method,$consent_form_id,$consent_form_version",
+        $source: "The Phoenix",
+        $email: $this.parent().parent().parent().find(".enter-email-discount").val(),
+        $consent_method: "Klaviyo Form",
+        $consent_form_id: "XsfBr6",
+        $consent_form_version: "2312983"
+      },
+      success: function(result){
+        $this.parent().parent().parent().parent().find(".coupon-success-card").removeClass("d-none");
+        $this.closest('.modal-body').find('.content1').show();
+        $this.closest('.modal-body').find('.content2').hide();
+        $this.parent().parent().parent().parent().find(".subscription-card").addClass("d-none");
+      }
+    });
+  }
 });
 
 $(".coupon-close").on("click", function() {
